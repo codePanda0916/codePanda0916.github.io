@@ -14,12 +14,12 @@
 <meta name="twitter:title" content="如何使用hugo搭建博客"/>
 <meta name="twitter:description" content="步骤 1、安装hugo // 通过brew来安装 brew install hugo // 安装成功之后检查一下版本 hugo version  2、创建blog文件夹 // 根目录myblog下执行 hugo new site myblog  3、克隆主题 // 从根目录下进入themes目录下 cd themes // 克隆主题（本博客采用主题：git clone https://github.com/vaga/hugo-theme-m10c.git） git clone git clone https://github.com/vaga/hugo-theme-m10c.git  4、启动项目 // (根目录下执行) hugo server -t m10c --buildDrafts  5、创建博客文章 // (根目录下执行) hugo new post/blog.md  6、去github上创建仓库 这里创建的&rdquo;Repository name&rdquo; = ${Owner}.github.io
 本人的&rdquo;Repository name&rdquo; = codePanda0916.github.io
-7、部署 // 根目录下执行 hugo --theme=m10c --baseUrl=&quot;https://codePanda0916.github.io/&quot; --buildDrafts  8、将生成的build文件夹上传到github上 // 从根目录进入build文件下 cd build git init git add ."/>
+7、部署 // 根目录下执行 hugo --theme=m10c --baseUrl=&quot;https://codePanda0916.github.io/&quot; --buildDrafts  8、将生成的public文件夹上传到github上 // 从根目录进入public文件下 cd public git init git add ."/>
 
     <meta property="og:title" content="如何使用hugo搭建博客" />
 <meta property="og:description" content="步骤 1、安装hugo // 通过brew来安装 brew install hugo // 安装成功之后检查一下版本 hugo version  2、创建blog文件夹 // 根目录myblog下执行 hugo new site myblog  3、克隆主题 // 从根目录下进入themes目录下 cd themes // 克隆主题（本博客采用主题：git clone https://github.com/vaga/hugo-theme-m10c.git） git clone git clone https://github.com/vaga/hugo-theme-m10c.git  4、启动项目 // (根目录下执行) hugo server -t m10c --buildDrafts  5、创建博客文章 // (根目录下执行) hugo new post/blog.md  6、去github上创建仓库 这里创建的&rdquo;Repository name&rdquo; = ${Owner}.github.io
 本人的&rdquo;Repository name&rdquo; = codePanda0916.github.io
-7、部署 // 根目录下执行 hugo --theme=m10c --baseUrl=&quot;https://codePanda0916.github.io/&quot; --buildDrafts  8、将生成的build文件夹上传到github上 // 从根目录进入build文件下 cd build git init git add ." />
+7、部署 // 根目录下执行 hugo --theme=m10c --baseUrl=&quot;https://codePanda0916.github.io/&quot; --buildDrafts  8、将生成的public文件夹上传到github上 // 从根目录进入public文件下 cd public git init git add ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codePanda0916.github.io/post/blog/" />
 <meta property="article:published_time" content="2019-10-16T00:00:00+00:00" />
@@ -113,10 +113,10 @@ hugo new post/blog.md
 hugo --theme=m10c --baseUrl=&quot;https://codePanda0916.github.io/&quot; --buildDrafts
 </code></pre>
 
-<h3 id="8-将生成的build文件夹上传到github上">8、将生成的build文件夹上传到github上</h3>
+<h3 id="8-将生成的public文件夹上传到github上">8、将生成的public文件夹上传到github上</h3>
 
-<pre><code class="language-javascript">// 从根目录进入build文件下
-cd build
+<pre><code class="language-javascript">// 从根目录进入public文件下
+cd public
 git init
 git add .
 git commit -m 'add my blog'
