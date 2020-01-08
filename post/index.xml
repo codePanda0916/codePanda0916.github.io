@@ -6,10 +6,27 @@
     <description>Recent content in Posts on 沧海一粟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codePanda0916.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何使用nvm来管理node</title>
+      <link>https://codePanda0916.github.io/post/nvm/</link>
+      <pubDate>Wed, 08 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/post/nvm/</guid>
+      <description>一、简介 1，为什么要选择使用nvm？ nodejs使用的场景越来越多，因为是开源软件，具备大多数开源软件都存在的&amp;rdquo;版本&amp;rdquo;问题，版本发展越快，版本前后差异性越大，老系统用新版本node跑不起来，全局安装的第三方组件和node版本相关造成全局版本混乱。而nvm就解决了这一个问题。
+2，什么是nvm，nvm的优势？ nvm是Node Version Manager的简称，github地址：https://github.com/nvm-sh/nvm
+a.可安装多版本的node
+b.灵活切换当前的node版本
+c.多版本node并存
+3，先安装nvm再安装node 如果已经通过nodejs官网安装了node，可参考下一步卸载掉全局node后再安装nvm。
+4，如何卸载通过官网下载的全局node（未安装可忽略此步） 如果我们的node是通过nodejs官网下载安装的，运行后会自动安装在全局目录，使用过程中经常会遇到一些版本不同导致的兼容性问题。所以推荐按照以下方法卸载全局安装的node/npm。
+a. 打开你的Finder，按&amp;rdquo;shift+command+G&amp;rdquo;,分别输入下列目录进去之后删除node和node_modules相关的文件和文件夹 b. 输入并进入/usr/local/lib，删除node和node_modules相关的文件和文件夹 c. 输入并进入/usr/local/include，删除node和node_modules相关的文件和文件夹 d. 检查个人文件夹下面所有的local、lib以及include文件夹，并且删除所有与node和node_modules相关的文件及文件夹 e. 打开/usr/local/bin并删除node可执行文件 f. 你可能还需要删除一些额外的命令(可手动删，也可通过rm、rm -rf，不过rm -rf会直接强行删除且没有任何提示) /usr/local/bin/npm /usr/local/share/man/man1/node.1 /usr/local/lib/dtrace/node.d ~/.npm ~/.node-gyp /opt/local/bin/node /opt/local/include/node /opt/local/lib/node_modules  g. 如果你使用的是brew install node安装的NodeJs，那么你还需要在终端中执行brew uninstall node命令来卸载 二、nvm的安装及使用 1，安装nvm 命令执行如下(通过 https://github.com/nvm-sh/nvm 获取最新版本)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash  2，检查是否安装成功 nvm -v // 不生效的话关掉命令行后重新打开再试  3，安装node nvm install v8 // 表示安装node的v8最新的版本 nvm install v8.16 // 表示安装node的v8.</description>
+    </item>
     
     <item>
       <title>Array属性及方法</title>
@@ -46,7 +63,7 @@ import React, {useState} from &#39;react&#39;; function Example(){ const [count,
       <guid>https://codePanda0916.github.io/post/blog/</guid>
       <description>步骤 1、安装hugo // 通过brew来安装 brew install hugo // 安装成功之后检查一下版本 hugo version  2、创建blog文件夹 // 根目录myblog下执行 hugo new site myblog  3、克隆主题 // 从根目录下进入themes目录下 cd themes // 克隆主题（本博客采用主题：git clone https://github.com/vaga/hugo-theme-m10c.git） git clone git clone https://github.com/vaga/hugo-theme-m10c.git  4、启动项目 // (根目录下执行) hugo server -t m10c --buildDrafts  5、创建博客文章 // (根目录下执行) hugo new post/blog.md  6、去github上创建仓库 这里创建的&amp;rdquo;Repository name&amp;rdquo; = ${Owner}.github.io
 本人的&amp;rdquo;Repository name&amp;rdquo; = codePanda0916.github.io
-7、部署 // 根目录下执行 hugo --theme=m10c --baseUrl=&amp;quot;https://codePanda0916.github.io/&amp;quot; --buildDrafts  8、将生成的build文件夹上传到github上 // 从根目录进入build文件下 cd build git init git add .</description>
+7、部署 // 根目录下执行 hugo --theme=m10c --baseUrl=&amp;quot;https://codePanda0916.github.io/&amp;quot; --buildDrafts  8、将生成的public文件夹上传到github上 // 从根目录进入public文件下 cd public git init git add .</description>
     </item>
     
   </channel>
