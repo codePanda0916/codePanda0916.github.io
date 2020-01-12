@@ -6,10 +6,22 @@
     <description>Recent content on 沧海一粟的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codePanda0916.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>git使用小结</title>
+      <link>https://codePanda0916.github.io/post/git/</link>
+      <pubDate>Sun, 12 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/post/git/</guid>
+      <description>一、git配置说明 忽略某些文件时，需要编写.gitignore文件。 &amp;ndash;global参数为全局参数，也就数带这个参数的命令在这台电脑的所有Git仓库下都有用。 配置Git的时候，加上&amp;ndash;global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。
+通过全局命令进行如下操作来配置别名（避免原单词长写错，偷懒）
+git config --global alias.st status git config --global alias.ci commit git config --global alias.co checkout git config --global alias.br branch  以上配置好后就可以进行如下简写操作啦
+   完整语法 别名简写 备注     git status git st status简写为st   git commit -m &amp;lsquo;xxxx&amp;rsquo; git ci -m &amp;lsquo;xxx&amp;rsquo; commit简写为ci   git checkout master git co master checkout简写为co   git branch dev git br dev branch简写为br    用户名密码配置 git config --global user.</description>
+    </item>
     
     <item>
       <title>如何使用nvm来管理node</title>

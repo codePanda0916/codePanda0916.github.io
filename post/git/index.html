@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>git使用小结 // 沧海一粟的博客</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.58.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="xiongyujie" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://codePanda0916.github.io/css/main.min.dba603e63ec5b577d7a002169562334d5b43ea092d7757c8b8a047795771f027.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="git使用小结"/>
+<meta name="twitter:description" content="一、git配置说明 忽略某些文件时，需要编写.gitignore文件。 &ndash;global参数为全局参数，也就数带这个参数的命令在这台电脑的所有Git仓库下都有用。 配置Git的时候，加上&ndash;global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。
+通过全局命令进行如下操作来配置别名（避免原单词长写错，偷懒）
+git config --global alias.st status git config --global alias.ci commit git config --global alias.co checkout git config --global alias.br branch  以上配置好后就可以进行如下简写操作啦
+   完整语法 别名简写 备注     git status git st status简写为st   git commit -m &lsquo;xxxx&rsquo; git ci -m &lsquo;xxx&rsquo; commit简写为ci   git checkout master git co master checkout简写为co   git branch dev git br dev branch简写为br    用户名密码配置 git config --global user."/>
+
+    <meta property="og:title" content="git使用小结" />
+<meta property="og:description" content="一、git配置说明 忽略某些文件时，需要编写.gitignore文件。 &ndash;global参数为全局参数，也就数带这个参数的命令在这台电脑的所有Git仓库下都有用。 配置Git的时候，加上&ndash;global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。
+通过全局命令进行如下操作来配置别名（避免原单词长写错，偷懒）
+git config --global alias.st status git config --global alias.ci commit git config --global alias.co checkout git config --global alias.br branch  以上配置好后就可以进行如下简写操作啦
+   完整语法 别名简写 备注     git status git st status简写为st   git commit -m &lsquo;xxxx&rsquo; git ci -m &lsquo;xxx&rsquo; commit简写为ci   git checkout master git co master checkout简写为co   git branch dev git br dev branch简写为br    用户名密码配置 git config --global user." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codePanda0916.github.io/post/git/" />
+<meta property="article:published_time" content="2020-01-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-12T00:00:00+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://codePanda0916.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="xiongyujie" /></a>
+      <h1>沧海一粟的博客</h1>
+      <p>脚踏实地，心系远方</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/xiongyujie" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">git使用小结</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 12, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h2 id="一-git配置说明">一、git配置说明</h2>
+
+<p>忽略某些文件时，需要编写.gitignore文件。
+&ndash;global参数为全局参数，也就数带这个参数的命令在这台电脑的所有Git仓库下都有用。
+配置Git的时候，加上&ndash;global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。</p>
+
+<p>通过全局命令进行如下操作来配置别名（避免原单词长写错，偷懒）</p>
+
+<pre><code class="language-javascript">git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.co checkout
+git config --global alias.br branch
+</code></pre>
+
+<p>以上配置好后就可以进行如下简写操作啦</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">完整语法</th>
+<th align="left">别名简写</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">git status</td>
+<td align="left">git st</td>
+<td align="left">status简写为st</td>
+</tr>
+
+<tr>
+<td align="left">git commit -m &lsquo;xxxx&rsquo;</td>
+<td align="left">git ci -m &lsquo;xxx&rsquo;</td>
+<td align="left">commit简写为ci</td>
+</tr>
+
+<tr>
+<td align="left">git checkout master</td>
+<td align="left">git co master</td>
+<td align="left">checkout简写为co</td>
+</tr>
+
+<tr>
+<td align="left">git branch dev</td>
+<td align="left">git br dev</td>
+<td align="left">branch简写为br</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="用户名密码配置">用户名密码配置</h4>
+
+<pre><code class="language-javascript">git config --global user.name &quot;your name&quot;
+git config --global user.email &quot;your@example.com&quot;
+</code></pre>
+
+<h2 id="二-工作区与暂存区">二，工作区与暂存区</h2>
+
+<p><img src="http://p.caigoubao.cc/627853/git.png" width = "600"  div align=center /></p>
+
+<p>第一步：用git add把文件添加进去，实际上就是把文件修改添加到.git中的暂存区。</p>
+
+<p>第二步：用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。</p>
+
+<p>我们初始化创建.git版本库时，git自动为我们创建了唯一一个master分支，所以，git commit就是往master分支上提交更改。</p>
+
+<h2 id="远程仓库">远程仓库</h2>
+
+<h4 id="1-关联一个远程库">1，关联一个远程库</h4>
+
+<pre><code class="language-javascript">git remote add origin git@xyjxxxxx.git
+</code></pre>
+
+<h4 id="2-从远程库克隆">2，从远程库克隆</h4>
+
+<pre><code class="language-javascript">git push -u origin master // 第一次推送，远程库是空的，加上-u参数。
+git push origin master    // 第二次之后就可以去掉-u参数。
+</code></pre>
+
+<h2 id="四-分支管理">四，分支管理</h2>
+
+<h4 id="1-创建分支">1，创建分支</h4>
+
+<pre><code class="language-javascript">git branch daily/0.0.1   // 创建分支
+</code></pre>
+
+<h4 id="2-切换分支">2，切换分支</h4>
+
+<pre><code class="language-javascript">git checkout daily/0.0.1   // 切换分支
+or
+git switch daily/0.0.1     // 切换分支
+</code></pre>
+
+<h4 id="3-创建分支-切换分支">3，创建分支+切换分支</h4>
+
+<pre><code class="language-javascript">git branch daily/0.0.1   // 创建分支
+git checkout daily/0.0.1 // 切换分支
+// 以上两步可以合并为如下操作
+git checkout -b daily/0.0.1  // 创建分支并切换到此分支
+// 新版git提供新的git switch来切换分支
+git switch -c daily/0.0.1    // 新版git
+</code></pre>
+
+<h4 id="4-查看当前分支">4，查看当前分支</h4>
+
+<pre><code class="language-javascript">git branch // 查看当前分支，当前分支前面带个*号，此命令会列出所有分支。
+</code></pre>
+
+<h4 id="5-合并分支">5，合并分支</h4>
+
+<pre><code class="language-javascript">git merge dev //合并指定分支dev到当前分支上。
+git merge --no-ff -m 'merge with' dev  // --no-ff参数表示禁用Fast forward
+</code></pre>
+
+<p>合并分支时，加上&ndash;no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
+
+<h4 id="6-删除分支">6，删除分支</h4>
+
+<pre><code class="language-javascript">git branch -d dev // 删除dev分支，（如果dev分支已经合并到master上，则可以将此分支删除掉）
+</code></pre>
+
+<h4 id="7-隐藏当前工作状态">7，隐藏当前工作状态</h4>
+
+<pre><code class="language-javascript">git stash
+</code></pre>
+
+<p>如果你当前工作dev分支进行到一半，还没法提交，发现线上有一个bug，急需1h内修改掉。就先用git stash将当前工作隐藏“储藏”起来，等创建另外分支修改好bug后再恢复
+那么现在就在master上创建分支来修复bug</p>
+
+<pre><code class="language-javascript">git stash                  // 第一步，影藏当前工作状态
+git checkout master        // 第二步，切换到master分支
+git checkout -b issDev     // 第三步，创建issDev分支+切换到issDev分支,并修改分支
+git checkout master        // 第四步，修改完了，切换到master之后，开始下一步合并分支
+git merge --no-off -m 'iss' issDev // 第五步，将issDev分支合并到master上
+git branch -d issDec       // 第六步，删掉合并后的分支
+</code></pre>
+
+<p>接下来，切换到dev分支,并恢复隐藏的原工作现场</p>
+
+<pre><code class="language-javascript">git checkout dev         // 切换到dev分支
+git stash list           // 查看之前的工作现场去哪儿里，接下来恢复现场
+// 提供两种方法
+// 方法一：
+git stash apply          // 恢复，但stash内容不会删除
+git stash drop           // 删除stash内容
+// 另外：如果多次git stash后，恢复加指定stash，如下
+git stash apply stash@{0}
+// 方法二：
+git stash pop            // 恢复+同时删除stash内容
+</code></pre>
+
+<p>删除掉stash内容后，用git stash list就查不到任何stash内容啦</p>
+
+<h4 id="8-如何将master分支上修复的bug-合并到当前的dev分支上">8，如何将master分支上修复的bug，合并到当前的dev分支上</h4>
+
+<pre><code class="language-javascript">git checkout dev             // 切换到dev分支上
+git cherry-pick &lt;commit_id&gt;  // 把bug提交的修改&quot;复制&quot;到当前分支，避免重复劳动
+</code></pre>
+
+<h4 id="9-强行删除一个分支">9，强行删除一个分支</h4>
+
+<pre><code class="language-javascript">git branch -D testDev  // 强行删除testDev分支
+</code></pre>
+
+<h4 id="10-推送分支">10，推送分支</h4>
+
+<pre><code class="language-javascript">git push origin master   // 推送到远程的master分支上
+git push origin dev      // 推送到远程的dev分支上
+</code></pre>
+
+<h4 id="11-查看远程的信息">11，查看远程的信息</h4>
+
+<pre><code class="language-javascript">git remote       // 查看远程库的信息
+git remote -v    // 查看更详细的信息
+</code></pre>
+
+<h4 id="12-在本地创建和远程分支对应的分支">12，在本地创建和远程分支对应的分支</h4>
+
+<pre><code class="language-javascript">// 本地与远程分支的名称最好一致
+git checkout -b 本地branch-name origin 远程branch-name
+</code></pre>
+
+<h4 id="13-关联本地分支与远程分支">13，关联本地分支与远程分支</h4>
+
+<pre><code class="language-javascript">// 本地与远程分支的名称最好一致
+git branch --set-upstream 本地branch-name origin 远程branch-name
+</code></pre>
+
+<h4 id="14-删除关联的远程库">14，删除关联的远程库</h4>
+
+<pre><code class="language-javascript">git remote rm origin
+</code></pre>
+
+<h4 id="15-git-rebase">15，git rebase</h4>
+
+<pre><code class="language-javascript">git rebase
+</code></pre>
+
+<p>rebase操作可以把本地未push的分叉提交历史整理成直线；
+rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</p>
+
+<h2 id="五-标签管理">五，标签管理</h2>
+
+<p>Git的标签是版本库的快照，有标签就可以对应找到commit。</p>
+
+<h4 id="1-创建标签">1，创建标签</h4>
+
+<pre><code class="language-javascript">git checkout dev             // 切换到dev分支上
+git tag v1.0                 // 给dev打标签为v1.0
+git tag                      // 查看所有标签
+git tag v2.0 f232c634        // 给commit_id为f232c634的提交打标签
+git show v1.0                // 查看v1.0标签信息
+git tag -a v3.0 -m 'addTag'  // 创建带有说明的标签，-a指定标签名，-m指定说明文字
+</code></pre>
+
+<h4 id="2-操作标签">2，操作标签</h4>
+
+<pre><code class="language-javascript">// 删除标签(比如标签打错)
+git tag -d v1.0
+// 将某个标签一次性推送到远程
+git push origin v1.0
+// 一次性推送全部尚未推送到远程的本地标签
+git push origin --tags
+// 删除远程的标签（两步）
+git tag -d v2.0                    // 先删除本地标签
+git push origin :refs/tags/v2.0    // 再删除远程标签
+</code></pre>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
