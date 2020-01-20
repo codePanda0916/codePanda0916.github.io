@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>javascript引用类型--Array类型 // codePanda</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.58.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="xiongyujie" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://codePanda0916.github.io/css/main.min.dba603e63ec5b577d7a002169562334d5b43ea092d7757c8b8a047795771f027.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="javascript引用类型--Array类型"/>
+<meta name="twitter:description" content="简介：引用类型的值（对象）是引用类型的一个实例。
+所有对象都具有toLocaleString(),toString()和valueOf()方法
+Array类型 1，创建数组的方式有两种 // 第一种：是使用Array构造函数 var colors = new Array(); var others = new Array(20, &#39;xyj&#39;); // 第二种：是使用数组字面量表示法 var colors = []; var others = [20, &#39;xyj&#39;];  2，检测数组的方法 方法一：instanceof，仅用于只有一个全局执行环境
+// 方法一： if(value instanceof Array){ // 对数组进行某些操作 } // 方法二：Array.isArray(value) if(Array.isArray(value)){ // 对数组执行某些操作 }  3，转换方法 3.1，toLocaleString() var colors = [&#39;red&#39;, &#39;green&#39;, &#39;yellow&#39;]; console.log(colors.toLocaleString()); // red,green,yellow  3.2， toString() var colors = [&#39;red&#39;, &#39;green&#39;, &#39;yellow&#39;]; console.log(colors.toString()); // red,green,yellow  3."/>
+
+    <meta property="og:title" content="javascript引用类型--Array类型" />
+<meta property="og:description" content="简介：引用类型的值（对象）是引用类型的一个实例。
+所有对象都具有toLocaleString(),toString()和valueOf()方法
+Array类型 1，创建数组的方式有两种 // 第一种：是使用Array构造函数 var colors = new Array(); var others = new Array(20, &#39;xyj&#39;); // 第二种：是使用数组字面量表示法 var colors = []; var others = [20, &#39;xyj&#39;];  2，检测数组的方法 方法一：instanceof，仅用于只有一个全局执行环境
+// 方法一： if(value instanceof Array){ // 对数组进行某些操作 } // 方法二：Array.isArray(value) if(Array.isArray(value)){ // 对数组执行某些操作 }  3，转换方法 3.1，toLocaleString() var colors = [&#39;red&#39;, &#39;green&#39;, &#39;yellow&#39;]; console.log(colors.toLocaleString()); // red,green,yellow  3.2， toString() var colors = [&#39;red&#39;, &#39;green&#39;, &#39;yellow&#39;]; console.log(colors.toString()); // red,green,yellow  3." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codePanda0916.github.io/js/array/" />
+<meta property="article:published_time" content="2020-01-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-20T00:00:00+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://codePanda0916.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="xiongyujie" /></a>
+      <h1>codePanda</h1>
+      <p>脚踏实地，心系远方</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/codePanda0916" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">javascript引用类型--Array类型</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 20, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          3 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<p>简介：引用类型的值（对象）是引用类型的一个实例。</p>
+
+<p>所有对象都具有toLocaleString(),toString()和valueOf()方法</p>
+
+<h3 id="array类型">Array类型</h3>
+
+<h4 id="1-创建数组的方式有两种">1，创建数组的方式有两种</h4>
+
+<pre><code class="language-javascript">// 第一种：是使用Array构造函数
+var colors = new Array();
+var others = new Array(20, 'xyj');
+// 第二种：是使用数组字面量表示法
+var colors = [];
+var others = [20, 'xyj'];
+</code></pre>
+
+<h4 id="2-检测数组的方法">2，检测数组的方法</h4>
+
+<p>方法一：instanceof，仅用于只有一个全局执行环境</p>
+
+<pre><code class="language-javascript">// 方法一：
+if(value instanceof Array){
+  // 对数组进行某些操作
+}
+// 方法二：Array.isArray(value)
+if(Array.isArray(value)){
+  // 对数组执行某些操作
+}
+</code></pre>
+
+<h4 id="3-转换方法">3，转换方法</h4>
+
+<h5 id="3-1-tolocalestring">3.1，toLocaleString()</h5>
+
+<pre><code class="language-javascript">var colors = ['red', 'green', 'yellow'];
+console.log(colors.toLocaleString());
+// red,green,yellow
+</code></pre>
+
+<h5 id="3-2-tostring">3.2， toString()</h5>
+
+<pre><code class="language-javascript">var colors = ['red', 'green', 'yellow'];
+console.log(colors.toString());
+// red,green,yellow
+</code></pre>
+
+<h5 id="3-3-valueof">3.3， valueOf()</h5>
+
+<pre><code class="language-javascript">var colors = ['red', 'green', 'yellow'];
+console.log(colors.valueOf());
+// [&quot;red&quot;, &quot;green&quot;, &quot;yellow&quot;]
+</code></pre>
+
+<h4 id="4-栈方法">4，栈方法</h4>
+
+<p>栈是一种先进后出(Last-In-First-Out)的数据结构；push()和pop()来实现类似栈的行为。</p>
+
+<pre><code class="language-javascript">var colors = [];
+// push(),可以接收任意数量的参数，然后逐个添加到数组末尾。
+colors.push('red', 'green')
+console.log(colors); // [&quot;red&quot;, &quot;green&quot;]
+// pop()则从数组末尾移除最后一项，减少数组的length值；
+colors.pop();
+console.log(colors); // [&quot;red&quot;]
+</code></pre>
+
+<h4 id="5-队列方法">5，队列方法</h4>
+
+<p>队列数据结构的访问规则是FIFO(first-in-first-out)，先进先出，
+shift()方法是在数组前端移除第一项，unshift()方法是在数组的前端添加任意个项并返回新数组的长度。</p>
+
+<h5 id="如下-两种队列方式">如下：两种队列方式</h5>
+
+<pre><code class="language-javascript">// shift与push组成一个队列(前出后进)
+var colors0 = ['red', 'green'];
+colors0.push('yellow');
+colors0.shift();
+// pop与shift组成一个队列(前进后出)
+var colors1 = ['red', 'green'];
+colors1.unshift('yellow');
+colors1.pop();
+</code></pre>
+
+<h4 id="6-重排序方法">6，重排序方法</h4>
+
+<p>数组中可以直接用来重排序的方法有reverse()和sort();</p>
+
+<h5 id="6-1-reverse">6.1 reverse()</h5>
+
+<pre><code class="language-javascript">// reverse()反转数组项的顺序
+var nums = [1,2,3,4,5,6,7];
+nums.reverse();
+nums; // [7, 6, 5, 4, 3, 2, 1]
+</code></pre>
+
+<h5 id="6-2-sort">6.2 sort()</h5>
+
+<pre><code class="language-javascript">// 由于reverse()不够灵活，因此才有了sort()方法
+// sort()在默认情况下，按升序排列数组项，既最小的值位于最前面，最大的值位于最后面。
+var arrs = [111,21,13,44,150,6,7];
+arrs.sort();
+arrs; // [111, 13, 150, 21, 44, 6, 7]
+</code></pre>
+
+<p>sort()函数接收一个比较函数作为参数，而比较函数则接收两个参数；</p>
+
+<pre><code class="language-javascript">// Array.sort(compare(value1, value2));
+// 如果value1 &gt; value2，则返回正数
+// 如果value1 = value2，则返回0
+// 如果value1 &lt; value2，则返回负数
+// 如下为常用的比较函数compare；
+
+// 1，升序排列
+var arrs = [23,14,25,98,10,18];
+var compare1 = function(value1, value2){
+  return value1 - value2;
+}
+arrs.sort(compare1);
+arrs; // [10, 14, 18, 23, 25, 98]
+
+// 2，降序排列
+var compare2 = function(value1, value2){
+  return value2 - value1;
+}
+arrs.sort(compare2);
+arrs; //  [98, 25, 23, 18, 14, 10]
+</code></pre>
+
+<h4 id="7-操作方法">7，操作方法</h4>
+
+<h5 id="7-1-concat-基于当前数组中的所有项创建一个新数组-不改变原数组">7.1，concat()，基于当前数组中的所有项创建一个新数组【不改变原数组】</h5>
+
+<pre><code class="language-javascript">var arrs = [1,2,3];
+var copyArrs = arrs.concat(); // copyArrs复制了arrs数组。
+var nextArrs = arrs.concat(44,55,14,23);
+nextArrs; // [1, 2, 3, 44, 55, 14, 23]
+</code></pre>
+
+<h5 id="7-2-slice-能够基于当前数组中的一或多个项创建一个新数组-slice接收一个或两个参数-不改变原数组">7.2，slice()，能够基于当前数组中的一或多个项创建一个新数组。slice接收一个或两个参数【不改变原数组】</h5>
+
+<pre><code class="language-javascript">// 一个参数：从起始参数开始到结束；
+var arrs = [1,2,3,4,5,6];
+var newArrs1 = arrs.slice(2);
+newArrs1; // [3,4,5,6]
+// 两个参数：从起始参数开始到结束位置的前一个值；
+newArrs2 = arrs.slice(2,3);
+newArrs2; // [3];
+</code></pre>
+
+<h5 id="7-3-splice-主要用途是向数组的中部插入项-改变原数组">7.3，splice()，主要用途是向数组的中部插入项【改变原数组】</h5>
+
+<pre><code class="language-javascript">// 1，删除：Array.splice(参数1，参数2)，参数1为要删除的第一项的位置，参数2为要删除的项数。
+
+var arrs0 = [1,2,3,4,5,6,7,8];
+arrs0.splice(3, 2);
+arrs0; // [1, 2, 3, 6, 7, 8]
+
+// 2，插入：Array.splice(参数1，0，参数2)，参数1为插入起始的位置，参数2为插入的项数。
+
+var arrs1 = [1,2,3,4,5,6,7,8];
+arrs1.splice(3,0,111,2222);
+arrs1; // [1, 2, 3, 111, 2222, 4, 5, 6, 7, 8]
+
+// 3，替换：Array.splice(参数1，n，参数2),参数1为替换起始的位置，n为要替换掉的(即要删掉的)项数，参数2为要插入替换的项数。
+
+var arrs2 = [1,2,3,4,5,6,7,8];
+arrs2.splice(3,2,111,2222);
+arrs2; // [1, 2, 3, 111, 2222, 6, 7, 8]
+</code></pre>
+
+<h4 id="8-位置方法">8，位置方法</h4>
+
+<p>indexOf()和lastIndexOf()都接收两个参数：要查找的项和（可选的）表示查找起点位置的索引。如果没有找到则返回-1。</p>
+
+<pre><code class="language-javascript">var numbers = [1,2,3,4,5,4,3,2,1];
+console.log(numbers.indexOf(4));     // 3
+console.log(numbers.lastIndexOf(4)); // 5
+console.log(numbers.indexOf(4,4));   // 5
+</code></pre>
+
+<h4 id="9-迭代方法">9，迭代方法</h4>
+
+<p>ES5为javascript提供了5个迭代方法。
+每个方法都接收两个参数：每一项上运行的函数和（可选的）运行该函数的作用域对象&mdash;影响this的值。</p>
+
+<pre><code class="language-javascript">var arrs = [1,2,3,4,5,6,7,8]
+// 1，every(): 数组中每一项运行的函数，都返回true，则返回true。
+
+var everyTrue = arrs.every((item, index, array) =&gt; {
+  return item &gt; 2;
+});
+isTure; // false
+
+// 2，some(): 数组中每一项运行的函数，任意一项返回true，则返回true。
+
+var someTrue = arrs.some((item, index, array) =&gt; {
+  return item &gt; 2;
+})
+someTrue; // true
+
+// 3，filter(): 数组中每一项运行的函数，返回该函数会返回true的项组成的数组。
+
+var filterList = arrs.filter((item, index, array) =&gt; {
+  return item &gt; 3;
+});
+filterList; // [4, 5, 6, 7, 8]
+
+// 4，map(): 数组中每一项运行的函数，返回每次函数调用的结果组成的数组。
+
+var mapList = arrs.map((item, index, array) =&gt; {
+  return item * 2;
+})
+mapList; // [2, 4, 6, 8, 10, 12, 14, 16]
+
+// 5，forEach(): 对数组中的每一项运行给定的函数，没有返回值；本质上与for循环迭代数组一样。
+arrs.forEach((item, index, array) =&gt; {
+  // 执行操作方法
+})
+</code></pre>
+
+<h4 id="10-归并方法">10，归并方法</h4>
+
+<p>ES5新增了两个归并数组的方法：reduce()和reduceRight()，这两个方法都接收两个参数&ndash;每一项上调用的函数和（可选的）作为归并基础的初始值。</p>
+
+<p>函数接收4个参数：前一个值、当前值、项的索引和数组对象。</p>
+
+<pre><code class="language-javascript">var arrs = [1,2,3,4,5];
+var sum = arrs.reduce((pre, next, index ,array) =&gt; {
+  return pre + next;
+}, 100)
+sum; // 115
+</code></pre>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
