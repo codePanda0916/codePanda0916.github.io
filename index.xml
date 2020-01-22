@@ -6,10 +6,49 @@
     <description>Recent content on codePanda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codePanda0916.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript引用类型--String类型</title>
+      <link>https://codePanda0916.github.io/js/string/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/js/string/</guid>
+      <description>String类型是字符串的对象包装类型，可以像下面这样使用String构造函数来创建。
+var stringObject = new String(&#39;hello world!&#39;); stringObject; // {&amp;quot;hello world!&amp;quot;} stringObject.length; // 12  String类型提供了很多方法；
+1，字符串方法 1.1 charAt() 接收一个基于0的字符位置的参数，返回给定位置的那个字符。
+var str = &amp;quot;hello world!&amp;quot;; str.charAt(4); // &amp;quot;o&amp;quot;  1.2 charCodeAt() 接收一个基于0的字符位置的参数，返回给定位置的那个字符的字符编码。
+var str = &amp;quot;hello world!&amp;quot;; str.charCodeAt(0); // 104  2，字符串操作方法 2.1 concat() 用于将一或多个字符串拼接起来，返回拼接得到的新字符串。
+var str = &#39;hello&#39;; var res = str.concat(&#39;world&#39;); console.log(str); // hello console.log(res); // helloworld  但实际过程中，用到更多的还是操作符（+），比用concat方便多啦。
+var str = &amp;quot;li&amp;quot;; var res = str + &#39;lei&#39;; console.</description>
+    </item>
+    
+    <item>
+      <title>javascript引用类型--单体内置对象</title>
+      <link>https://codePanda0916.github.io/js/global/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/js/global/</guid>
+      <description> ECMA-262定义了两个单体内置对象：Global和Math。
+一、Global对象 ECMAScript中的Global对象在某种意义上是作为一个终极的&amp;rdquo;兜底儿对象&amp;rdquo;来定义的。所有全局的属性和方法都是Global对象的属性。
+1，URL编码方法 encodeURI()和encodeURIComponent()方法可以对URI(Uniform Resource Identifiers,通用资源标识符)进行编码，以便发送给浏览器。
+encodeURI() encodeURI()主要用于整个URI（例如：http://www.wrox.com/illegal value.htm）,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号；
+ encodeURIComponent() encodeURIComponent()主要用于对URI中的某一段进行编码，并对发现的任何非标准字符进行编码。
+ 二、Math对象 </description>
+    </item>
+    
+    <item>
+      <title>javascript引用类型--Date类型</title>
+      <link>https://codePanda0916.github.io/js/date/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/js/date/</guid>
+      <description> 简介：和其它类型一样，Date类型也重写了toLocaleString()、toString()和valueOf()方法。
+Date </description>
+    </item>
     
     <item>
       <title>javascript引用类型--Array类型</title>
@@ -101,6 +140,15 @@ import React, {useState} from &#39;react&#39;; function Example(){ const [count,
       <description>步骤 1、安装hugo // 通过brew来安装 brew install hugo // 安装成功之后检查一下版本 hugo version  2、创建blog文件夹 // 根目录myblog下执行 hugo new site myblog  3、克隆主题 // 从根目录下进入themes目录下 cd themes // 克隆主题（本博客采用主题：git clone https://github.com/vaga/hugo-theme-m10c.git） git clone git clone https://github.com/vaga/hugo-theme-m10c.git  4、启动项目 // (根目录下执行) hugo server -t m10c --buildDrafts  5、创建博客文章 // (根目录下执行) hugo new post/blog.md  6、去github上创建仓库 这里创建的&amp;rdquo;Repository name&amp;rdquo; = ${Owner}.github.io
 本人的&amp;rdquo;Repository name&amp;rdquo; = codePanda0916.github.io
 7、部署 // 根目录下执行 hugo --theme=m10c --baseUrl=&amp;quot;https://codePanda0916.github.io/&amp;quot; --buildDrafts  8、将生成的public文件夹上传到github上 // 从根目录进入public文件下 cd public git init git add .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://codePanda0916.github.io/js/function/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/js/function/</guid>
+      <description></description>
     </item>
     
   </channel>

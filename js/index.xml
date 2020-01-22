@@ -6,10 +6,49 @@
     <description>Recent content in Js on codePanda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://codePanda0916.github.io/js/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript引用类型--String类型</title>
+      <link>https://codePanda0916.github.io/js/string/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/js/string/</guid>
+      <description>String类型是字符串的对象包装类型，可以像下面这样使用String构造函数来创建。
+var stringObject = new String(&#39;hello world!&#39;); stringObject; // {&amp;quot;hello world!&amp;quot;} stringObject.length; // 12  String类型提供了很多方法；
+1，字符串方法 1.1 charAt() 接收一个基于0的字符位置的参数，返回给定位置的那个字符。
+var str = &amp;quot;hello world!&amp;quot;; str.charAt(4); // &amp;quot;o&amp;quot;  1.2 charCodeAt() 接收一个基于0的字符位置的参数，返回给定位置的那个字符的字符编码。
+var str = &amp;quot;hello world!&amp;quot;; str.charCodeAt(0); // 104  2，字符串操作方法 2.1 concat() 用于将一或多个字符串拼接起来，返回拼接得到的新字符串。
+var str = &#39;hello&#39;; var res = str.concat(&#39;world&#39;); console.log(str); // hello console.log(res); // helloworld  但实际过程中，用到更多的还是操作符（+），比用concat方便多啦。
+var str = &amp;quot;li&amp;quot;; var res = str + &#39;lei&#39;; console.</description>
+    </item>
+    
+    <item>
+      <title>javascript引用类型--单体内置对象</title>
+      <link>https://codePanda0916.github.io/js/global/</link>
+      <pubDate>Wed, 22 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/js/global/</guid>
+      <description> ECMA-262定义了两个单体内置对象：Global和Math。
+一、Global对象 ECMAScript中的Global对象在某种意义上是作为一个终极的&amp;rdquo;兜底儿对象&amp;rdquo;来定义的。所有全局的属性和方法都是Global对象的属性。
+1，URL编码方法 encodeURI()和encodeURIComponent()方法可以对URI(Uniform Resource Identifiers,通用资源标识符)进行编码，以便发送给浏览器。
+encodeURI() encodeURI()主要用于整个URI（例如：http://www.wrox.com/illegal value.htm）,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号；
+ encodeURIComponent() encodeURIComponent()主要用于对URI中的某一段进行编码，并对发现的任何非标准字符进行编码。
+ 二、Math对象 </description>
+    </item>
+    
+    <item>
+      <title>javascript引用类型--Date类型</title>
+      <link>https://codePanda0916.github.io/js/date/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/js/date/</guid>
+      <description> 简介：和其它类型一样，Date类型也重写了toLocaleString()、toString()和valueOf()方法。
+Date </description>
+    </item>
     
     <item>
       <title>javascript引用类型--Array类型</title>
@@ -34,6 +73,15 @@ Array类型 1，创建数组的方式有两种 // 第一种：是使用Array构�
 Object类型 创建Object实例的方式有两种： // 第一种：使用new操作符后跟Object构造函数 var person = new Object(); person.name = &amp;quot;xyj&amp;quot;; person.age = 29; // 第二种：使用对象字面量表示法 var person = { name: &amp;quot;xyj&amp;quot;, age: 18 }  实际上，对象字面量也是函数传递大量可选参数的首选方式。
 访问对象属性时常用的都是点表示法，不过，在Javascript中，也可以使用方括号表示法来访问对象的属性，在使用方括号语法时，应该将要访问的属性以字符串的形式放在方括号中，如下：
 var person = { age: 18, name: &amp;quot;xyj&amp;quot; }; console.log(person.age); // 18 console.log(person[&amp;quot;name&amp;quot;]); // xyj  通常情况下，除非必须使用变量来访问属性，否则我们建议使用点表示法。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://codePanda0916.github.io/js/function/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://codePanda0916.github.io/js/function/</guid>
+      <description></description>
     </item>
     
   </channel>

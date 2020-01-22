@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>javascript引用类型--单体内置对象 // codePanda</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.58.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="xiongyujie" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://codePanda0916.github.io/css/main.min.dba603e63ec5b577d7a002169562334d5b43ea092d7757c8b8a047795771f027.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="javascript引用类型--单体内置对象"/>
+<meta name="twitter:description" content=" ECMA-262定义了两个单体内置对象：Global和Math。
+一、Global对象 ECMAScript中的Global对象在某种意义上是作为一个终极的&rdquo;兜底儿对象&rdquo;来定义的。所有全局的属性和方法都是Global对象的属性。
+1，URL编码方法 encodeURI()和encodeURIComponent()方法可以对URI(Uniform Resource Identifiers,通用资源标识符)进行编码，以便发送给浏览器。
+encodeURI() encodeURI()主要用于整个URI（例如：http://www.wrox.com/illegal value.htm）,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号；
+ encodeURIComponent() encodeURIComponent()主要用于对URI中的某一段进行编码，并对发现的任何非标准字符进行编码。
+ 二、Math对象 "/>
+
+    <meta property="og:title" content="javascript引用类型--单体内置对象" />
+<meta property="og:description" content=" ECMA-262定义了两个单体内置对象：Global和Math。
+一、Global对象 ECMAScript中的Global对象在某种意义上是作为一个终极的&rdquo;兜底儿对象&rdquo;来定义的。所有全局的属性和方法都是Global对象的属性。
+1，URL编码方法 encodeURI()和encodeURIComponent()方法可以对URI(Uniform Resource Identifiers,通用资源标识符)进行编码，以便发送给浏览器。
+encodeURI() encodeURI()主要用于整个URI（例如：http://www.wrox.com/illegal value.htm）,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号；
+ encodeURIComponent() encodeURIComponent()主要用于对URI中的某一段进行编码，并对发现的任何非标准字符进行编码。
+ 二、Math对象 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codePanda0916.github.io/js/global/" />
+<meta property="article:published_time" content="2020-01-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-22T00:00:00+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://codePanda0916.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="xiongyujie" /></a>
+      <h1>codePanda</h1>
+      <p>脚踏实地，心系远方</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/codePanda0916" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">javascript引用类型--单体内置对象</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 22, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<p>ECMA-262定义了两个单体内置对象：Global和Math。</p>
+
+<h3 id="一-global对象">一、Global对象</h3>
+
+<p>ECMAScript中的Global对象在某种意义上是作为一个终极的&rdquo;兜底儿对象&rdquo;来定义的。所有全局的属性和方法都是Global对象的属性。</p>
+
+<h4 id="1-url编码方法">1，URL编码方法</h4>
+
+<p>encodeURI()和encodeURIComponent()方法可以对URI(Uniform Resource Identifiers,通用资源标识符)进行编码，以便发送给浏览器。</p>
+
+<h5 id="encodeuri">encodeURI()</h5>
+
+<p>encodeURI()主要用于整个URI（例如：<a href="http://www.wrox.com/illegal">http://www.wrox.com/illegal</a> value.htm）,encodeURI()不会对本身属于URI的特殊字符进行编码，例如冒号、正斜杠、问号和井字号；</p>
+
+<pre><code class="language-javascript">
+</code></pre>
+
+<h5 id="encodeuricomponent">encodeURIComponent()</h5>
+
+<p>encodeURIComponent()主要用于对URI中的某一段进行编码，并对发现的任何非标准字符进行编码。</p>
+
+<pre><code class="language-javascript">
+</code></pre>
+
+<h3 id="二-math对象">二、Math对象</h3>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

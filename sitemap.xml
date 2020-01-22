@@ -4,7 +4,27 @@
   
   <url>
     <loc>https://codePanda0916.github.io/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codePanda0916.github.io/js/string/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codePanda0916.github.io/js/global/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codePanda0916.github.io/js/</loc>
+    <lastmod>2020-01-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codePanda0916.github.io/js/date/</loc>
+    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -14,11 +34,6 @@
   
   <url>
     <loc>https://codePanda0916.github.io/js/object/</loc>
-    <lastmod>2020-01-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codePanda0916.github.io/js/</loc>
     <lastmod>2020-01-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -50,6 +65,11 @@
   <url>
     <loc>https://codePanda0916.github.io/post/blog/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codePanda0916.github.io/js/function/</loc>
+    <priority>0</priority>
   </url>
   
   <url>

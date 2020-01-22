@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>javascript引用类型--String类型 // codePanda</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.58.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="xiongyujie" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://codePanda0916.github.io/css/main.min.dba603e63ec5b577d7a002169562334d5b43ea092d7757c8b8a047795771f027.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="javascript引用类型--String类型"/>
+<meta name="twitter:description" content="String类型是字符串的对象包装类型，可以像下面这样使用String构造函数来创建。
+var stringObject = new String(&#39;hello world!&#39;); stringObject; // {&quot;hello world!&quot;} stringObject.length; // 12  String类型提供了很多方法；
+1，字符串方法 1.1 charAt() 接收一个基于0的字符位置的参数，返回给定位置的那个字符。
+var str = &quot;hello world!&quot;; str.charAt(4); // &quot;o&quot;  1.2 charCodeAt() 接收一个基于0的字符位置的参数，返回给定位置的那个字符的字符编码。
+var str = &quot;hello world!&quot;; str.charCodeAt(0); // 104  2，字符串操作方法 2.1 concat() 用于将一或多个字符串拼接起来，返回拼接得到的新字符串。
+var str = &#39;hello&#39;; var res = str.concat(&#39;world&#39;); console.log(str); // hello console.log(res); // helloworld  但实际过程中，用到更多的还是操作符（&#43;），比用concat方便多啦。
+var str = &quot;li&quot;; var res = str &#43; &#39;lei&#39;; console."/>
+
+    <meta property="og:title" content="javascript引用类型--String类型" />
+<meta property="og:description" content="String类型是字符串的对象包装类型，可以像下面这样使用String构造函数来创建。
+var stringObject = new String(&#39;hello world!&#39;); stringObject; // {&quot;hello world!&quot;} stringObject.length; // 12  String类型提供了很多方法；
+1，字符串方法 1.1 charAt() 接收一个基于0的字符位置的参数，返回给定位置的那个字符。
+var str = &quot;hello world!&quot;; str.charAt(4); // &quot;o&quot;  1.2 charCodeAt() 接收一个基于0的字符位置的参数，返回给定位置的那个字符的字符编码。
+var str = &quot;hello world!&quot;; str.charCodeAt(0); // 104  2，字符串操作方法 2.1 concat() 用于将一或多个字符串拼接起来，返回拼接得到的新字符串。
+var str = &#39;hello&#39;; var res = str.concat(&#39;world&#39;); console.log(str); // hello console.log(res); // helloworld  但实际过程中，用到更多的还是操作符（&#43;），比用concat方便多啦。
+var str = &quot;li&quot;; var res = str &#43; &#39;lei&#39;; console." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codePanda0916.github.io/js/string/" />
+<meta property="article:published_time" content="2020-01-22T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-22T00:00:00+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://codePanda0916.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="xiongyujie" /></a>
+      <h1>codePanda</h1>
+      <p>脚踏实地，心系远方</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/codePanda0916" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">javascript引用类型--String类型</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 22, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<p>String类型是字符串的对象包装类型，可以像下面这样使用String构造函数来创建。</p>
+
+<pre><code class="language-javascript">var stringObject = new String('hello world!');
+stringObject; // {&quot;hello world!&quot;}
+stringObject.length; // 12
+</code></pre>
+
+<p>String类型提供了很多方法；</p>
+
+<h4 id="1-字符串方法">1，字符串方法</h4>
+
+<h5 id="1-1-charat">1.1 charAt()</h5>
+
+<p>接收一个基于0的字符位置的参数，返回给定位置的那个字符。</p>
+
+<pre><code class="language-javascript">var str = &quot;hello world!&quot;;
+str.charAt(4); // &quot;o&quot;
+</code></pre>
+
+<h5 id="1-2-charcodeat">1.2 charCodeAt()</h5>
+
+<p>接收一个基于0的字符位置的参数，返回给定位置的那个字符的字符编码。</p>
+
+<pre><code class="language-javascript">var str = &quot;hello world!&quot;;
+str.charCodeAt(0); // 104
+</code></pre>
+
+<h4 id="2-字符串操作方法">2，字符串操作方法</h4>
+
+<h5 id="2-1-concat">2.1 concat()</h5>
+
+<p>用于将一或多个字符串拼接起来，返回拼接得到的新字符串。</p>
+
+<pre><code class="language-javascript">var str = 'hello';
+var res = str.concat('world');
+console.log(str); // hello
+console.log(res); // helloworld
+</code></pre>
+
+<p>但实际过程中，用到更多的还是操作符（+），比用concat方便多啦。</p>
+
+<pre><code class="language-javascript">var str = &quot;li&quot;;
+var res = str + 'lei';
+console.log(str); // li
+console.log(res); // lilei
+</code></pre>
+
+<h5 id="2-2-slice-startindex-lastindex">2.2 slice(startIndex, lastIndex)</h5>
+
+<p>startIndex：指定字符串的开始位置，lastIndex：指定的字符串最后一个字符串后面的位置，连个参数都可为负数。</p>
+
+<pre><code class="language-javascript">var str = &quot;good afternoon&quot;
+console.log(str.slice(2));   // &quot;od afternoon&quot;
+console.log(str.slice(2,4)); // &quot;od&quot;
+console.log(str.slice(-2));  // &quot;on&quot;
+console.log(str.slice(-2, -1)); // &quot;o&quot;
+</code></pre>
+
+<h5 id="2-3-substr-startindex-n">2.3 substr(startIndex, n)</h5>
+
+<p>startIndex：指定字符串开始的位置，可为负数；
+n：字符串的个数，不可为负数，若为负数会自动转换为0；</p>
+
+<pre><code class="language-javascript">var str = &quot;abcdefgh&quot;;
+console.log(str.substr(3));     // &quot;defgh&quot;
+console.log(str.substr(-1,2));  // &quot;h&quot;
+console.log(str.substr(-1,-1)); // &quot;&quot;
+</code></pre>
+
+<h5 id="2-4-substring-startindex-lastindex">2.4 substring(startIndex, lastIndex)</h5>
+
+<p>startIndex,lastIndex都会把负数转换为0；</p>
+
+<pre><code class="language-javascript">var str = &quot;abcdefghi&quot;;
+console.log(str.substring(2));    // &quot;cdefghi&quot;
+console.log(str.substring(2,4));  // &quot;cd&quot;
+console.log(str.substring(-2));   // &quot;abcdefghi&quot;
+console.log(str.substring(2,-2)); // &quot;ab&quot;
+</code></pre>
+
+<h4 id="3-字符串位置方法">3，字符串位置方法</h4>
+
+<h5 id="3-1-indexof">3.1 indexOf()</h5>
+
+<p>从字符串的开头向后搜索子字符串，可接收两个参数，第一个参数是要搜索的子字符串，第二个参数是从字符串中的哪个位置开始搜索。搜不到返回-1；</p>
+
+<pre><code class="language-javascript">var str = &quot;hello world!&quot;;
+console.log(str.indexOf('l'));   // 2
+console.log(str.indexOf('l',4)); // 9
+</code></pre>
+
+<h5 id="3-2-lastindexof">3.2 lastIndexOf()</h5>
+
+<p>从字符串的末尾向前搜索子字符串，可接收两个参数，第一个参数是要搜索的子字符串，第二个参数是从字符串中的哪个位置开始搜索。搜不到返回-1；</p>
+
+<pre><code class="language-javascript">var str = &quot;hello world!&quot;;
+console.log(str.lastIndexOf('l'));   // 9
+console.log(str.lastIndexOf('l',4)); // 3
+</code></pre>
+
+<h4 id="4-trim">4，trim()</h4>
+
+<p>这个方法创建一个字符串的副本，删除前置及后缀的所有空格，然后返回结果。</p>
+
+<pre><code class="language-javascript">var str = &quot;   good  &quot;;
+var trim = str.trim();
+console.log(str);    // &quot;   good  &quot;
+console.log(trim);   // &quot;good&quot;
+</code></pre>
+
+<h4 id="5-字符串大小写转换方法">5，字符串大小写转换方法</h4>
+
+<p>toLocaleLowerCase和toLocaleUpperCase是针对地区的方法，对于不知道自己代码将在哪种语言环境中运行的情况下，还是使用针对地区的方法更稳妥一些。</p>
+
+<h5 id="5-1-tolowercase">5.1 toLowerCase()</h5>
+
+<p>将字符串转换为小写</p>
+
+<pre><code class="language-javascript">var str = &quot;hello world!&quot;
+str.toLowerCase(); // &quot;hello world!&quot;
+</code></pre>
+
+<h5 id="5-2-tolocalelowercase">5.2 toLocaleLowerCase()</h5>
+
+<p>在针对地区的情况下，将字符串转换为小写</p>
+
+<pre><code class="language-javascript">var str = &quot;hello world!&quot;;
+str.toLocaleLowerCase();  // &quot;hello world!&quot;
+</code></pre>
+
+<h5 id="5-3-touppercase">5.3 toUpperCase()</h5>
+
+<p>将字符串转换为大写</p>
+
+<pre><code class="language-javascript">var str = &quot;hello world!&quot;;
+str.toUpperCase();  // &quot;HELLO WORLD!&quot;
+</code></pre>
+
+<h5 id="5-4-tolocaleuppercase">5.4 toLocaleUpperCase()</h5>
+
+<p>在针对地区的情况下，将字符串转换为大写</p>
+
+<pre><code class="language-javascript">var str = &quot;hello world!&quot;;
+str.toLocaleUpperCase();  // &quot;HELLO WORLD!&quot;
+</code></pre>
+
+<h4 id="6-字符串的模式匹配方法">6，字符串的模式匹配方法</h4>
+
+<h5 id="6-1-match">6.1 match()</h5>
+
+<p>接收一个参数，要么是一个字符串，要么是一个正则表达式或RegExp对象。本质上与调用RegExp的exec()方法相同。</p>
+
+<pre><code class="language-javascript">var text = &quot;cat,mat&quot;;
+var matchs = text.match(/at/);
+console.log(matchs); // [&quot;at&quot;, index: 1, input: &quot;cat,mat&quot;, groups: undefined]
+
+</code></pre>
+
+<h5 id="6-2-search">6.2 search()</h5>
+
+<p>接收一个参数，这个参数要么是个字符串，要么是一个正则表达式或RegExp对象。返回第一项的索引。</p>
+
+<pre><code class="language-javascript">var text = &quot;cat,bat,sat,fat&quot;;
+var pos = text.search(/at/);
+console.log(pos); // 1
+</code></pre>
+
+<h5 id="6-3-replace">6.3 replace()</h5>
+
+<p>接收两个参数，第一个参数是一个字符串或者RegExp对象，第二个参数是一个字符串或者一个函数。</p>
+
+<pre><code class="language-javascript">var text = &quot;cat,bat,sat,fat&quot;;
+var res = text.replace(/at/g, 'A');
+var rest = text.replace('at', 'A');
+console.log(text);  // &quot;cat,bat,sat,fat&quot;
+console.log(res);   // &quot;cA,bA,sA,fA&quot;
+console.log(rest);  // &quot;cA,bat,sat,fat&quot;
+</code></pre>
+
+<h5 id="6-4-split">6.4 split()</h5>
+
+<p>可以基于指定的分隔符将一个字符串分割成多个子字符串，并将结果放在一个数组中，分隔符可以是字符串，也可以是一个RegExp对象，split()方法可以接受可选的第二个参数，用于指定数组的大小，以便确保返回的数组不会超过既定大小。</p>
+
+<pre><code class="language-javascript">var text = &quot;red,blue,green,yellow&quot;;
+var color0 = text.split();    // [&quot;red,blue,green,yellow&quot;]
+var color1 = text.split(','); // [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;yellow&quot;]
+var color2 = text.split(',', 2); // [&quot;red&quot;, &quot;blue&quot;]
+</code></pre>
+
+<h4 id="7-localecompare">7，localeCompare()</h4>
+
+<p>这个方法比较两个字符串，并返回下列值中的一个：</p>
+
+<pre><code class="language-javascript">// 1, 如果字符串在字母表中应该排在字符串参数之前，则返回一个负数（大多数情况下是-1，具体的值要视实现而定）；
+// 2，如果字符串等于字符串参数，则返回0；
+// 3，如果字符串在字母表中应该排在字符串参数之后，则返回一个正数（大多数情况下是-1，具体的值要视实现而定）
+var str = &quot;yellow&quot;;
+console.log(str.localeCompare('zoo'));   // -1
+console.log(str.localeCompare('yellow'));// 0
+console.log(str.localeCompare('brick')); // 1
+// 另外大写字母是排在小写字母前面的
+</code></pre>
+
+<h4 id="8-fromcharcode">8，fromCharCode()</h4>
+
+<p>这个方法的任务是接收一或多个字符串编码，然后将它们转换成一个字符串。从本质上来看，这个方法与实例方法charCodeAt()执行的是相反的操作。</p>
+
+<pre><code class="language-javascript">console.log(String.fromCharCode(104,101,108,108,111)); // hello
+// 这里是给fromCharCode()传递的是字符串&quot;hello&quot;中每个字母的字符编码
+</code></pre>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
